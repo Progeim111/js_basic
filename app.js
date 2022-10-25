@@ -1,82 +1,34 @@
-/*
-if(condition) {
-    // if statements
-} else {
-    // else statements
+console.log('for loop')
+for (let number = 0; number < 10; number++) {
+    if(number == 5){
+        // break
+        continue
+    }
+    console.log(number)
 }
-
-== equal   ->  ===
-!= not equal  ->  !==
-*/
-let personID = 34;
-
-/*if(typeof personID === 'undefined'){
-    console.log('id is not correct')
-} else {
-    console.log(`id is ${personID}`)
-}*/
-
-/*
-if(condition) {
-    // if statements
-} else if(condition1){
-    // if1 statements
-} else {
-    else statement
+console.log('while loop')
+let number1 = 11;
+while (number1 < 10){
+    console.log(number1)
+    number1++
 }
-*/
+console.log('do-while loop')
+let number2 = 11;
+do {
+    console.log(number2)
+    number2++
+} while (number2 < 10)
 
-/*const color = 'blue'
-if(color === 'red'){
-    console.log('Stop!')
-} else if(color === 'yellow'){
-    console.log('Attention!')
-} else if(color === 'green'){
-    console.log('Go!')
-} else {
-    console.log('Error!')
-}*/
+const cars = ['Audi', 'Tesla', 'BMW']
+cars.forEach((car) => {
+    console.log(car)
+})
 
-/*
-condition1 && condition2 - and
-condition1 || condition2 - or
-* */
-
-const name = 'Kadi'
-const age = 1
-
-if(age > 0 && age <= 12){
-    console.log(`${name} on laps`)
-} else if(age > 12 && age < 18){
-    console.log(`${name} on nooruk`)
-} else {
-    console.log(`${name} on täiskasvanu`)
+const person = {
+    firstname: 'Kadi',
+    lastname: 'Tamm',
+    age: 40
 }
-
-let id = 5
-
-if(id === 100){
-    console.log('Ok')
-} else {
-    console.log('Not')
-}
-
-// ? - ternary
-console.log(id === 100 ? 'Ok' : 'Not')
-
-// switch
-const color = 'blue'
-
-switch (color) {
-    case "red":
-        console.log('Stop!')
-        break;
-    case "yellow":
-        console.log('Attention!')
-        break;
-    case "green":
-        console.log('Go!')
-        break;
-    default:
-        console.log('Error!')
+for (let personKey in person) {
+    console.log(person[personKey])
 }
