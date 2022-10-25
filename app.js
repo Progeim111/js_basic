@@ -1,26 +1,22 @@
 const firstname = 'Rait'
 const surname = 'Sööt'
+const email = 'Rait.soot@voco.ee'
+const department = 'ITA21'
 
-let val = firstname + ' ' + surname
+let result = '<ul>' +
+    '<li><b>Name:</b> ' + firstname + '</li>' +
+    '<li><b>Surname:</b> ' + surname + '</li>' +
+    '<li><b>Email:</b> ' + email + '</li>' +
+    '<li><b>Department:</b> ' + department + '</li>' +
+    '</ul>'
 
-val = 'Rait '
-val += surname
+result = `
+    <ul>
+        <li><b>Name: </b>${firstname}</li>
+        <li><b>Surname: </b>${surname}</li>
+        <li><b>Email: </b>${email}</li>
+        <li><b>Department: </b>${department}</li>
+    </ul>`
 
-val = firstname.toUpperCase()
-val = surname.toLowerCase()
-
-val = surname[0]
-val = surname.indexOf('a')
-val = surname.lastIndexOf('a')
-
-val = surname.charAt(2)
-val = surname.charAt(surname.length - 1)
-
-val = surname.substring(0, 4)
-val = surname.slice(0, 4)
-val = surname.slice(-3)
-
-const tags = 'JS, HTML, CSS'
-val = tags.split(',')
-
-console.log(val[1].trim())
+console.log(result)
+document.body.innerHTML = result
